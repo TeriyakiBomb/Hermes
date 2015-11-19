@@ -12,11 +12,13 @@ module.exports = function(grunt) {
 
         // Re-usable filesystem paths (these shouldn't be modified)
         paths: {
-          src:        'src',
-          src_img:    'src/img',
-          dist:       'dist',
-          dist_img:   'dist/img',
-          preview:    'preview'
+          src:              'src',
+          src_img:          'src/img',
+          dist:             'dist',
+          dist_img:         'dist/img',
+          eloqua:           'src/services/eloqua',
+          mailChimp:        'src/services/mailChimp',
+          campaignMonitor:  'src/services/campaignMonitor'
         },
 
 
@@ -66,10 +68,18 @@ module.exports = function(grunt) {
         // Assembles your email content with HTML layout
         assemble: {
           options: {
-            layoutdir: '<%= paths.src %>/layouts',
-            partials: ['<%= paths.src %>/partials/**/*.hbs'],
+            layoutdir: '<%= paths.src %>/layouts', 
+            partials: [
+              '<%= paths.src %>/partials/**/*.hbs',
+              '<%= paths.eloqua %>/partials/**/*.hbs',
+              '<%= paths.mailChimp %>/partials/**/*.hbs',
+              '<%= paths.campaignMonitor %>/partials/**/*.hbs',
+            ],
             helpers: ['<%= paths.src %>/helpers/**/*.js'],
-            data: ['<%= paths.src %>/data/*.{json,yml}'],
+            data: [
+              '<%= paths.src %>/variables/*.{json,yml}',
+              '<%= paths.eloqua %>/variables/*.{json,yml}'
+            ],
             flatten: true
           },
           pages: {
