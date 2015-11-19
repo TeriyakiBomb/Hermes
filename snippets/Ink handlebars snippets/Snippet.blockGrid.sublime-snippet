@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{{>blockGrid classes="${1}" size="${2}"}}
+	${0:Remember, a block grid needs a {{>blockGridDivider}} between each block.}
+{{>blockGrid}}
+]]></content>
+	<tabTrigger>ink-blockGrid</tabTrigger>
+	<description>An ink blockGrid container</description>
+</snippet>

@@ -1,0 +1,35 @@
+unsubscribe_url:      "http://go.thefoundry.co.uk/prefcentre?elq=<eloqua type='emailfield' syntax='recipientid’/"
+
+#Social Media links
+
+twitter_url:          "https://twitter.com/thefoundryteam"
+facebook_url:         "https://www.facebook.com/thefoundryteam"
+vimeo_url:            "https://vimeo.com/thefoundry"
+youtube_url:          "https://www.youtube.com/user/TheFoundryChannel"
+google_plus_url:      "https://plus.google.com/+TheFoundry"
+
+#product Links
+
+flix:                 "https://www.thefoundry.co.uk/products/flix/"
+modo:                 "https://www.thefoundry.co.uk/products/modo/"
+colorway:             "https://www.thefoundry.co.uk/products/colorway/"
+mari:                 "https://www.thefoundry.co.uk/products/mari/"
+katana:               "https://www.thefoundry.co.uk/products/katana/"
+nuke:                 "https://www.thefoundry.co.uk/products/nuke/"
+ocula:                "https://www.thefoundry.co.uk/products/ocula/"
+hiero:                "https://www.thefoundry.co.uk/products/hiero-product-family/"
+hieroplayer:          "https://www.thefoundry.co.uk/products/hiero-product-family/hieroplayer/"
+mischief:             "https://www.thefoundry.co.uk/products/mischief/"
+modo_download:        "https://www.thefoundry.co.uk/products/modo/downloads/"
+mari_download:        "https://www.thefoundry.co.uk/products/mari/downloads/"
+nuke_download:        "https://www.thefoundry.co.uk/products/nuke/downloads/"
+colorway_download:    "https://www.thefoundry.co.uk/products/colorway/downloads/"
+ocula_download:       "https://www.thefoundry.co.uk/products/ocula/downloads/"
+katana_download:      "https://www.thefoundry.co.uk/products/katana/downloads/"
+hiero_download:       "https://www.thefoundry.co.uk/products/hiero-product-family/hiero/downloads/"
+hieroplayer_download: "https://www.thefoundry.co.uk/products/hiero-product-family/hieroplayer/downloads/"
+plugins:              "https://www.thefoundry.co.uk/products/plugins/"
+cameratracker:        "https://www.thefoundry.co.uk/products/plugins/cameratracker/"
+keylight:             "https://www.thefoundry.co.uk/products/plugins/keylight/"
+kronos:               "https://www.thefoundry.co.uk/products/plugins/kronos/"
+furnace:              "https://www.thefoundry.co.uk/products/plugins/furnace/"

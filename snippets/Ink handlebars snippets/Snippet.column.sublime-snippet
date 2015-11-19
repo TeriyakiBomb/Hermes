@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{{>column columns="${1}" end="${2}"}}
+	${0:other optional parameters are offset, pad and classes}
+{{>column-ends}}
+]]></content>
+	<tabTrigger>ink-column</tabTrigger>
+	<description>An ink column</description>
+</snippet>

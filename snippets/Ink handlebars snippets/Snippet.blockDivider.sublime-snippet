@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+{{>blockDivider}}
+]]></content>
+	<tabTrigger>ink-blockDivider</tabTrigger>
+	<description>An ink blockDivider</description>
+</snippet>

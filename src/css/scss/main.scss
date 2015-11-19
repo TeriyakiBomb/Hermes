@@ -1,0 +1,190 @@
+// Main scss styles
+//@import 'config';
+//@import 'global';
+//@import 'layout';
+//@import 'type';
+//@import 'buttons';
+//@import 'other';
+//@import 'responsive';
+//@import 'ink';
+@import 'ink_generated';
+
+body, .body{
+	font-family: 'helvetica',sans-serif;
+	font-weight:300 !important;
+	color: $grey !important;
+}
+
+.container{
+	background-color:white;
+	background:white;
+}
+
+//TYPOGRAPHY
+
+h1,h2,h3,h4{
+}
+
+h1{font-size:30px;}
+
+h2{font-size:27px;}
+
+h3{font-size:24px;}
+
+h4{font-size:24px;}
+
+p,td{
+	font-weight:300;
+	hyphens:none !important;
+
+	a{color:$hyperlink; font-weight:bold;}
+}
+
+
+//BOXES
+
+.intro{
+	background:$medgrey !important;
+	//background-color:$medgrey;
+
+	tr,td,p,h1,h2,h3,h4{
+		color:$white !important;
+	}
+
+	td{
+		padding-top:25px;
+		padding-bottom:25px;
+	}
+}
+
+.intro-light{
+	@extend .intro;
+	background:$lightgrey !important;
+}
+
+.text-center{
+	text-align:center;
+}
+
+//BUTTONS
+
+.half {
+  width:50% !important;
+}
+
+.quarter {
+  width:25% !important;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .half {
+    width:100% !important;
+  }
+
+  .quarter {
+    width:100% !important;
+  }
+
+}
+
+table.button,
+table.tiny-button,
+table.small-button,
+table.medium-button,
+table.large-button {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+table.button td,
+table.tiny-button td,
+table.small-button td,
+table.medium-button td,
+table.large-button td {
+  display: block;
+  width: auto !important;
+  text-align: center;
+  background: $medgrey;
+  border: none !important;
+  color: #ffffff;
+  padding: 8px 0;
+}
+
+table.tiny-button td {
+  padding: 5px 0 4px;
+}
+
+table.small-button td {
+  padding: 8px 0 7px;
+}
+
+table.medium-button td {
+  padding: 12px 0 10px;
+}
+
+table.large-button td {
+  padding: 21px 0 18px;
+}
+
+table.button td a,
+table.tiny-button td a,
+table.small-button td a,
+table.medium-button td a,
+table.large-button td a {
+  font-weight: bold;
+  text-decoration: none;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+table.tiny-button td a {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+table.small-button td a {
+  font-size: 16px;
+}
+
+table.medium-button td a {
+  font-size: 20px;
+}
+
+table.large-button td a {
+  font-size: 24px;
+}
+
+table.button:hover td,
+table.button:visited td,
+table.button:active td {
+}
+
+table.button:hover td a,
+table.button:visited td a,
+table.button:active td a {
+}
+
+table.button:hover td,
+table.tiny-button:hover td,
+table.small-button:hover td,
+table.medium-button:hover td,
+table.large-button:hover td {
+}
+
+table.button-2 td {
+}
+
+table.button-2 td a {
+}
+
+table.button-2:hover td {
+}
+
+table.button-2:hover td a,
+table.button-2 td a:visited,
+table.button-2:active td a {
+}

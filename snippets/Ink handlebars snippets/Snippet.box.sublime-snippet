@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{{>box classes="${1}"}}
+	${0:other optional parameters are pad and columns}
+{{>box-ends}}
+]]></content>
+	<tabTrigger>ink-box</tabTrigger>
+	<description>An ink box, this is a full row</description>
+</snippet>

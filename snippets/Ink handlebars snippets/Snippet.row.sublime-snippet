@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{{>row classes="${1}"}}
+	${0}
+{{>row-ends}}
+]]></content>
+	<tabTrigger>ink-row</tabTrigger>
+	<description>An ink row</description>
+</snippet>

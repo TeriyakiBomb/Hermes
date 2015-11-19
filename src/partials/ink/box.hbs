@@ -1,0 +1,8 @@
+{{!-- Box is an entire row, so will always have the 'last' class --}}
+<table class="row">
+	<tr>
+		<td class="wrapper last {{classes}}">
+			<table class="{{>columnLogic}} columns">
+				<tr>
+					{{!-- For general version might swap this behaviour--}}
+					<td class="{{#is pad 'left'}}left-text-pad{{/is}}{{#is pad 'right'}}right-text-pad{{/is}}{{#is pad 'both'}}text-pad{{/is}}{{#is pad 'none'}}{{/is}}{{#unless pad}}text-pad{{/unless}}">

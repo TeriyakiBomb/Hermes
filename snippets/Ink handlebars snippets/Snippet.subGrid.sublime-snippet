@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+{{>subGrid classes="${1}" columns="${2}" end="${3}"}}
+	${0}
+{{>subGrid}}
+]]></content>
+	<tabTrigger>ink-subGrid</tabTrigger>
+	<description>An ink subGrid column</description>
+</snippet>
