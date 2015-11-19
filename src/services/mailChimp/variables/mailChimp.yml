@@ -1,0 +1,78 @@
+firstName: 	      "*|FNAME|*"
+lastName: 	      "*|LNAME|*"
+email: 	          "*|EMAIL|*"
+
+addressBook:      "*|HTML:LIST_ADDRESS_HTML|*"
+
+listName:         "*|LIST:NAME|*"
+aboutList:        "*|ABOUT_LIST|*"
+listId:           "*|LIST:UID|*"
+url:              "*|LIST:URL|*"
+phone:            "*|LIST:PHONE|*"
+company:          "*|LIST:COMPANY|*"
+replyTo:          "*|LIST:EMAIL|*"
+forward:          "*|FORWARD|*"
+rewards:          "*|REWARDS|*"
+rewardsText:      "*|REWARDS_TEXT|*"
+#date in default formatting, see partial for options version
+dateSimple:       "*|DATE|*"
+optInDate:        "*|OPTIN_DATE|*"
+optInDatetime:    "*|OPTIN_DATETIME|*"
+
+subscriberBadge:  "*|LIST:SUBSCRIBER_BADGE|*"
+subscriberBadge1: "*|LIST:SUBSCRIBER_BADGE1|*"
+subscriberBadge2: "*|LIST:SUBSCRIBER_BADGE2|*"
+subscriberBadge3: "*|LIST:SUBSCRIBER_BADGE3|*"
+subscriberBadge4: "*|LIST:SUBSCRIBER_BADGE4|*"
+
+sub:              "*|LIST:SUBSCRIBE|*"
+subscribe:        "*|LIST:SUBSCRIBE|*"
+unsub:            "*|UNSUB|*"
+unsubscribe:      "*|UNSUB|*"
+updateProfile:    "*|UPDATE_PROFILE|*"
+
+TOC:              "*|MC:TOC|*"
+grouponDeals:     "*|LOCAL:DEALS|*"
+deals:            "*|LOCAL:DEALS|*"
+
+#------------------------------------
+# Social Media
+#------------------------------------
+
+#facebook like with no URL, see partial for options version
+facebookLike:     "*|FACEBOOK:LIKE|*"
+facebookProfile:  "*|FACEBOOK:PROFILEURL|*"
+
+shareFacebook:    "*|SHARELINK:Facebook|*"
+facebookShare:    "*|SHARELINK:Facebook|*"
+
+twitterProfile:   "*|TWITTER:PROFILEURL|*"
+tweet:            "*|TWITTER:TWEET|*"
+
+shareTwitter:     "*|SHARELINK:Twitter|*"
+twitterShare:     "*|SHARELINK:Twitter|*"
+
+shareTumblr:      "*|TUMBLR:SHARE|*"
+tumblrShare:      "*|TUMBLR:SHARE|*"
+
+googlePlusOne:    "*|GOOGLE:PLUSONE|*"
+plusOne: 		  "*|GOOGLE:PLUSONE|*"
+
+instapaper:       "*|INSTAPAPER:|*"
+
+#------------------------------------
+# RSS
+#------------------------------------
+
+rssList:          "*|RSS:POSTS_FULL|*"
+feedItemDate:     "*|FEEDITEM:DATE|*"
+feedItemUrl: 	  "*|FEEDITEM:URL|*"
+feedItemCategory: "*|FEEDITEM:CATEGORIES|*"
+feedItemContent:  "*|FEEDITEM:CONTENT|*"
+feedItemAuthor:   "*|FEEDITEM:AUTHOR|*"
+feedItemEnclosure:"*|FEEDITEM:ENCLOSURE|*"
+feedItemComments: "*|FEEDITEM:COMMENTS_URL|*"
+feedLike:         "*|FEEDITEM:LIKE|*"
+feedTweet:        "*|FEEDITEM:TWITTER|*"
+feedTumbler:      "*|FEEDITEM:TUMBLR|*"
+
