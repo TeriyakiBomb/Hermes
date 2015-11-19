@@ -68,7 +68,7 @@ module.exports = function(grunt) {
         // Assembles your email content with HTML layout
         assemble: {
           options: {
-            layoutdir: '<%= paths.src %>/layouts', 
+            layoutdir: '<%= paths.src %>/layouts',
             partials: [
               '<%= paths.src %>/partials/**/*.hbs',
               '<%= paths.eloqua %>/partials/**/*.hbs',

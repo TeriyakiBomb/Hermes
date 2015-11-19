@@ -1,61 +1,59 @@
-{{! To add a new entry copy one of the lines and follow the format, the string in the quotes is what you are expecting to be typed, the string before the end is what actually gets added!}}
+address1:	                                "Address1"
+address2:	                                "Address2"
 
-address1:	                                Address1
-address2:	                                Address2
+bouncebackEmailAddress:		                "elqFromAddress"
+fromAdress:		                			"elqFromAddress"
+elqFromAddress:		                		"elqFromAddress"
 
-bouncebackEmailAddress:		                elqFromAddress
-fromAdress:		                			elqFromAddress
-elqFromAddress:		                		elqFromAddress
+bouncebackName:                             "elqFromName"
+fromName:                              		"elqFromName"
+elqFromName:                              	"elqFromName"
 
-bouncebackName:                             elqFromName
-fromName:                              		elqFromName
-elqFromName:                              	elqFromName
+businessPhone:		                        "Business_Phone1"
+campaignId:		                            "campaignid"
+city:		                                "City"
+clientId:		                            "siteid"
+company:		                            "Company"
+country:	                                "Country"
+emailAddress:		                        "EmailAddress"
+emailDisplayName:	                        "EmailDisplayName"
+eventDate:                                  "Event___Date1"
+firstNameForm:		                        "First_Name___Forms1"
+firstName:	         		                "FirstName"
+Language:                                   "Language1"
+lastName:		                            "LastName"
+PURLName:		                            "C_elqPURLName11"
 
-businessPhone:		                        Business_Phone1
-campaignId:		                            campaignid
-city:		                                City
-clientId:		                            siteid
-company:		                            Company
-country:	                                Country
-emailAddress:		                        EmailAddress
-emailDisplayName:	                        EmailDisplayName
-eventDate:                                  Event___Date1
-firstNameForm:		                        First_Name___Forms1
-firstName:	         		                FirstName
-Language:                                   Language1
-lastName:		                            LastName
-PURLName:		                            C_elqPURLName11
+referAFriendFromEmailAddress:		        "elqRFfromemailaddress"
+friendFromAddress:		        			"elqRFfromemailaddress"
 
-referAFriendFromEmailAddress:		        elqRFfromemailaddress
-friendFromAddress:		        			elqRFfromemailaddress
+referAFriendFromName:		                "elqRFfromname"
+friendFromName:		                		"elqRFfromname"
 
-referAFriendFromName:		                elqRFfromname
-friendFromName:		                		elqRFfromname
+referAFriendInstance:	                    "rlqReeFriendiD"
+friendInstance:	                    		"rlqReeFriendiD"
 
-referAFriendInstance:	                    rlqReeFriendiD
-friendInstance:	                    		rlqReeFriendiD
-
-referAFriendMessage:		                elqRFcontent
-friendMessage:		                    	elqRFcontent
+referAFriendMessage:		                "elqRFcontent"
+friendMessage:		                    	"elqRFcontent"
 
 
-referAFriendToEmailAddress:		            elqRFtoemailaddress
-friendToAddress:		            		elqRFtoemailaddress
+referAFriendToEmailAddress:		            "elqRFtoemailaddress"
+friendToAddress:		            		"elqRFtoemailaddress"
 
-referAFriendToName:	                        elqRFtoname
-friendToName:	                        	elqRFtoname
+referAFriendToName:	                        "elqRFtoname"
+friendToName:	                        	"elqRFtoname"
 
-replyToEmailAddress:	                    elqReplyToAddress
-replyToAddress:	                    		elqReplyToAddress
+replyToEmailAddress:	                    "elqReplyToAddress"
+replyToAddress:	                    		"elqReplyToAddress"
 
-replyToName:                               	elqReplyToName
-showEmailId:	                            elqEmailSaveGUID
-state:	                                    State_Prov
-province:	                                State_Prov
-title:                    					Title1
+replyToName:                               	"elqReplyToName"
+showEmailId:	                            "elqEmailSaveGUID"
+state:	                                    "State_Prov"
+province:	                                "State_Prov"
+title:                    					"Title1"
 
-uniqueRecipientId:	                        recipientid
-recipientId:	                 			recipientid
+uniqueRecipientId:	                        "recipientid"
+recipientId:	                 			"recipientid"
 
-zip:	                                    Zip_Postal
-postCode:	                                Zip_Postal
+zip:	                                    "Zip_Postal"
+postCode:	                                "Zip_Postal"
