@@ -1,41 +1,61 @@
-{{!! To add a new entry copy one of the lines and follow the format, the string in the quotes is whatg you are expecting to be typed, the string before the end is what actually gets added!!}}
+{{! To add a new entry copy one of the lines and follow the format, the string in the quotes is what you are expecting to be typed, the string before the end is what actually gets added!}}
 
-{{#is type 'Address' }}                              Address1 {{/is}}
-{{#is type 'Address2' }}                             Address2 {{/is}}
-{{#is type 'elqFromAddress' }}                       elqFromAddress {{/is}}
-{{#is type 'elqFromName' }}                          elqFromName {{/is}}
-{{#is type 'Business_Phone' }}                       Business_Phone1 {{/is}}
-{{#is type 'campaignid' }}                           campaignid {{/is}}
-{{#is type 'City' }}                                 City {{/is}}
-{{#is type 'siteid' }}                               siteid {{/is}}
-{{#is type 'Company' }}                              Company {{/is}}
-{{#is type 'Country' }}                              Country {{/is}}
-{{#is type 'EmailAddress' }}                         EmailAddress {{/is}}
-{{#is type 'EmailDisplayName' }}                     EmailDisplayName {{/is}}
-{{#is type 'EventDate' }}                            Event___Date1 {{/is}}
-{{#is type 'EventTime' }}                            Event___Time1 {{/is}}
-{{#is type 'EventSession' }}                         Event__Session1 {{/is}}
-{{#is type 'EventCity' }}                            Event__City1 {{/is}}
-{{#is type 'EventSpeaker' }}                         Event__Speaker1 {{/is}}
-{{#is type 'EventAddress' }}                         Event__Address1 {{/is}}
-{{#is type 'EventState' }}                           Event__State1 {{/is}}
-{{#is type 'EventZipCode' }}                         Event__Zip_Code1 {{/is}}
-{{#is type 'FirstName' }}                            FirstName {{/is}}
-{{#is type 'FirstNameForms' }}                       First_Name___Forms1 {{/is}}
-{{#is type 'LastName' }}                             LastName {{/is}}
-{{#is type 'C_elqPURLName1' }}                       C_elqPURLName11 {{/is}}
-{{#is type 'elqRFfromemailaddress' }}                elqRFfromemailaddress {{/is}}
-{{#is type 'elqRFfromname' }}                        elqRFfromname {{/is}}
-{{#is type 'elqReferFriendID' }}                     elqReferFriendID {{/is}}
-{{#is type 'elqRFcontent' }}                         elqRFcontent {{/is}}
-{{#is type 'elqRFtoemailaddress' }}                  elqRFtoemailaddress {{/is}}
-{{#is type 'elqRFtoname' }}                          elqRFtoname {{/is}}
-{{#is type 'elqReplyToAddress' }}                    elqReplyToAddress {{/is}}
-{{#is type 'elqReplyToName' }}                       elqReplyToName {{/is}}
-{{#is type 'Sales_Country_FM' }}                     Sales_Country_FM1 {{/is}}
-{{#is type 'Sales_State_FM' }}                       Sales_State_FM1 {{/is}}
-{{#is type 'elqEmailSaveGUID' }}                     elqEmailSaveGUID {{/is}}
-{{#is type 'State_Prov' }}                           State_Prov {{/is}}
-{{#is type 'Title' }}                                Title1 {{/is}}
-{{#is type 'recipientid' }}                          recipientid {{/is}}
-{{#is type 'Zip_Postal' }}                           Zip_postal {{/is}}
+{{#is type 'Address1' }}	                                Address1 {{/is}}
+{{#is type 'Address2' }}	                                Address2 {{/is}}
+
+{{#is type 'bouncebackEmailAddress' }}		                elqFromAddress {{/is}}
+{{#is type 'fromAdress' }}		                			elqFromAddress {{/is}}
+{{#is type 'elqFromAddress' }}		                		elqFromAddress {{/is}}
+
+{{#is type 'bouncebackName' }}                              elqFromName {{/is}}
+{{#is type 'fromName' }}                              		elqFromName {{/is}}
+{{#is type 'elqFromName' }}                              	elqFromName {{/is}}
+
+{{#is type 'businessPhone' }}		                        Business_Phone1 {{/is}}
+{{#is type 'CampaignId' }}		                            campaignid {{/is}}
+{{#is type 'City' }}		                                City {{/is}}
+{{#is type 'clientId' }}		                            siteid {{/is}}
+{{#is type 'Company' }}		                                Company {{/is}}
+{{#is type 'Country' }}	                                    Country {{/is}}
+{{#is type 'emailAddress' }}		                        EmailAddress {{/is}}
+{{#is type 'emailDisplayName' }}	                        EmailDisplayName {{/is}}
+{{#is type 'eventDate' }}                                   Event___Date1 {{/is}}
+{{#is type 'firstNameForm' }}		                        First_Name___Forms1 {{/is}}
+{{#is type 'firstName' }}	         		                FirstName {{/is}}
+{{#is type 'Language' }}                                    Language1 {{/is}}
+{{#is type 'lastName' }}		                            LastName {{/is}}
+{{#is type 'PURLName' }}		                            C_elqPURLName11 {{/is}}
+
+{{#is type 'referAFriendFromEmailAddress' }}		        elqRFfromemailaddress {{/is}}
+{{#is type 'friendFromAddress' }}		        			elqRFfromemailaddress {{/is}}
+
+{{#is type 'referAFriendFromName' }}		                elqRFfromname {{/is}}
+{{#is type 'friendFromName' }}		                		elqRFfromname {{/is}}
+
+{{#is type 'referAFriendInstance' }}	                    rlqReeFriendiD {{/is}}
+{{#is type 'friendInstance' }}	                    		rlqReeFriendiD {{/is}}
+
+{{#is type 'referAFriendMessage' }}		                    elqRFcontent {{/is}}
+{{#is type 'friendMessage' }}		                    	elqRFcontent {{/is}}
+
+
+{{#is type 'referAFriendToEmailAddress' }}		            elqRFtoemailaddress {{/is}}
+{{#is type 'friendToAddress' }}		            			elqRFtoemailaddress {{/is}}
+
+{{#is type 'referAFriendToName' }}	                        elqRFtoname {{/is}}
+{{#is type 'friendToName' }}	                        	elqRFtoname {{/is}}
+
+{{#is type 'ReplyToEmailAddress' }}	                    	elqReplyToAddress {{/is}}
+{{#is type 'ReplyToAddress' }}	                    		elqReplyToAddress {{/is}}
+
+{{#is type 'ReplyToName' }}                               	elqReplyToName {{/is}}
+{{#is type 'ShowEmailId' }}	                                elqEmailSaveGUID {{/is}}
+{{#is type 'State' }}	                                    State_Prov {{/is}}
+{{#is type 'Province' }}	                                State_Prov {{/is}}
+{{#is type 'Title' }}                    					Title1 {{/is}}
+
+{{#is type 'UniqueRecipientId' }}	                        recipientid {{/is}}
+{{#is type 'RecipientId' }}	                 				recipientid {{/is}}
+
+{{#is type 'Zip' }}	                                        Zip_Postal {{/is}}
+{{#is type 'postCode' }}	                                Zip_Postal {{/is}}
