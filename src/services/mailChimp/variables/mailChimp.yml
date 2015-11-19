@@ -34,3 +34,28 @@ updateProfile:    "*|UPDATE_PROFILE|*"
 TOC:              "*|MC:TOC|*"
 grouponDeals:     "*|LOCAL:DEALS|*"
 deals:            "*|LOCAL:DEALS|*"
+
+#------------------------------------
+#Social Media
+#------------------------------------
+
+#facebook like with no URL, see partial for options version
+facebookLike:     "*|FACEBOOK:LIKE|*"
+facebookProfile:  "*|FACEBOOK:PROFILEURL|*"
+
+shareFacebook:    "*|SHARELINK:Facebook|*"
+facebookShare:    "*|SHARELINK:Facebook|*"
+
+twitterProfile:   "*|TWITTER:PROFILEURL|*"
+tweet:            "*|TWITTER:TWEET|*"
+
+shareTwitter:     "*|SHARELINK:Twitter|*"
+twitterShare:     "*|SHARELINK:Twitter|*"
+
+shareTumblr:      "*|TUMBLR:SHARE|*"
+tumblrShare:      "*|TUMBLR:SHARE|*"
+
+googlePlusOne:    "*|GOOGLE:PLUSONE|*"
+plusOne: 		  "*|GOOGLE:PLUSONE|*"
+
+instapaper:       "*|INSTAPAPER:|*"
