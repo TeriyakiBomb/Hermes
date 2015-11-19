@@ -36,7 +36,7 @@ grouponDeals:     "*|LOCAL:DEALS|*"
 deals:            "*|LOCAL:DEALS|*"
 
 #------------------------------------
-#Social Media
+# Social Media
 #------------------------------------
 
 #facebook like with no URL, see partial for options version
@@ -59,3 +59,20 @@ googlePlusOne:    "*|GOOGLE:PLUSONE|*"
 plusOne: 		  "*|GOOGLE:PLUSONE|*"
 
 instapaper:       "*|INSTAPAPER:|*"
+
+#------------------------------------
+# RSS
+#------------------------------------
+
+rssList:          "*|RSS:POSTS_FULL|*"
+feedItemDate:     "*|FEEDITEM:DATE|*"
+feedItemUrl: 	  "*|FEEDITEM:URL|*"
+feedItemCategory: "*|FEEDITEM:CATEGORIES|*"
+feedItemContent:  "*|FEEDITEM:CONTENT|*"
+feedItemAuthor:   "*|FEEDITEM:AUTHOR|*"
+feedItemEnclosure:"*|FEEDITEM:ENCLOSURE|*"
+feedItemComments: "*|FEEDITEM:COMMENTS_URL|*"
+feedLike:         "*|FEEDITEM:LIKE|*"
+feedTweet:        "*|FEEDITEM:TWITTER|*"
+feedTumbler:      "*|FEEDITEM:TUMBLR|*"
+
