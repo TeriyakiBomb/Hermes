@@ -78,7 +78,8 @@ module.exports = function(grunt) {
             helpers: ['<%= paths.src %>/helpers/**/*.js'],
             data: [
               '<%= paths.src %>/variables/*.{json,yml}',
-              '<%= paths.eloqua %>/variables/*.{json,yml}'
+              '<%= paths.eloqua %>/variables/*.{json,yml}',
+              '<%= paths.mailChimp %>/variables/*.{json,yml}'
             ],
             flatten: true
           },
