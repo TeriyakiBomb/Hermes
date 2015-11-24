@@ -231,6 +231,21 @@ module.exports = function(grunt) {
 
 
 
+        mandrill: {
+          mailer: {
+            options: {
+              key: '<%= secrets.mandrill.api_key %>',
+              sender: '<%= secrets.mandrill.sender %>',
+              recipient: '<%= secrets.mandrill.recipeint %>'.
+              subject: 'This is a test email'
+            },
+            src: ['templates/*.html']
+          }
+        },
+
+
+
+
 
         // Use Rackspace Cloud Files if you're using images in your email
         // grunt cdnify
@@ -305,7 +320,6 @@ module.exports = function(grunt) {
 
 
         // Send your email template to Litmus for testing
-        // grunt litmus --template=transaction.html
         litmus: {
           test: {
             src: ['<%= paths.dist %>/'+grunt.option('template')],
@@ -334,7 +348,9 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['assemble','premailer', 'replace:emptyLines', 'replace:lineBreaks'/*, 'imagemin','replace:src_images'*/]);
 
     // Use grunt send if you want to actually send the email to your inbox
-    grunt.registerTask('send', ['mailgun']);
+    grunt.registerTask('mailgun', ['mailgun']);
+
+    grunt.registerTask('mandrill', ['mandrill']);
 
     // Upload images to our CDN on Rackspace Cloud Files
     grunt.registerTask('cdnify', ['default','cloudfiles','cdn:cloudfiles']);

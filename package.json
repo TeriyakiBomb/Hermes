@@ -20,6 +20,7 @@
     "grunt-express": "^1.4.1",
     "grunt-litmus": "^0.1.8",
     "grunt-mailgun": "^0.2.1",
+    "grunt-mandrill": "0.0.3",
     "grunt-newer": "^1.1.1",
     "grunt-newer-explicit": "^0.9.4",
     "grunt-open": "^0.2.3",
