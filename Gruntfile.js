@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 
         // secrets.json is ignored in git because it contains sensitive data
         // See the README for configuration settings
-        //secrets: grunt.file.readJSON('secrets.json'),
+        secrets: grunt.file.readJSON('secrets.json'),
 
         // Re-usable filesystem paths (these shouldn't be modified)
         paths: {
@@ -214,15 +214,26 @@ module.exports = function(grunt) {
 
 
 
-        // Use Mailgun option if you want to email the design to your inbox or to something like Litmus
-        // grunt send --template=transaction.html
+        // grunt sendMailgun
+        // PARAMETERS
+        // --template=example.html
+        // --recipient=guy@whatever.com     (optional)
         mailgun: {
-          mailer: {
+          standard: {
             options: {
               key: '<%= secrets.mailgun.api_key %>', // See README for secrets.json or replace this with your own key
               sender: '<%= secrets.mailgun.sender %>', // See README for secrets.json or replace this with your preferred sender
-              recipient: '<%= secrets.mailgun.recipient %>', // See README for secrets.json or replace this with your preferred recipient
+              recipient: '<%= secrets.general.recipient %>', // See README for secrets.json or replace this with your preferred recipient
               subject: 'This is a test email'
+            },
+            src: ['<%= paths.dist %>/'+grunt.option('template')]
+          },
+          custom: {
+            options: {
+              key: '<%= secrets.mailgun.api_key %>', // See README for secrets.json or replace this with your own key
+              sender: '<%= secrets.mailgun.sender %>', // See README for secrets.json or replace this with your preferred sender
+              recipient: grunt.option('recipient'), // See README for secrets.json or replace this with your preferred recipient
+              subject: 'This is a test email',
             },
             src: ['<%= paths.dist %>/'+grunt.option('template')]
           }
@@ -230,16 +241,28 @@ module.exports = function(grunt) {
 
 
 
-
+        // grunt sendMandrill
+        // PARAMETERS
+        // --template=example.html
+        // --recipient=guy@whatever.com     (optional)
         mandrill: {
-          mailer: {
+          standard: {
             options: {
               key: '<%= secrets.mandrill.api_key %>',
               sender: '<%= secrets.mandrill.sender %>',
-              recipient: '<%= secrets.mandrill.recipeint %>'.
+              recipient: '<%= secrets.general.recipient %>',
               subject: 'This is a test email'
             },
-            src: ['templates/*.html']
+            src: ['<%= paths.dist %>/'+grunt.option('template')]
+          },
+          custom: {
+            options: {
+              key: '<%= secrets.mandrill.api_key %>', // See README for secrets.json or replace this with your own key
+              sender: '<%= secrets.mandrill.sender %>', // See README for secrets.json or replace this with your preferred sender
+              recipient: grunt.option('recipient'), // See README for secrets.json or replace this with your preferred recipient
+              subject: 'This is a test email',
+            },
+            src: ['<%= paths.dist %>/'+grunt.option('template')]
           }
         },
 
@@ -320,6 +343,7 @@ module.exports = function(grunt) {
 
 
         // Send your email template to Litmus for testing
+        // grunt litmus --template=example.html
         litmus: {
           test: {
             src: ['<%= paths.dist %>/'+grunt.option('template')],
@@ -348,9 +372,10 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['assemble','premailer', 'replace:emptyLines', 'replace:lineBreaks'/*, 'imagemin','replace:src_images'*/]);
 
     // Use grunt send if you want to actually send the email to your inbox
-    grunt.registerTask('mailgun', ['mailgun']);
+    var recipient = (grunt.option('recipient') ? 'custom' : 'standard');
+    grunt.registerTask('sendMailgun', ['mailgun:' + recipient]);
 
-    grunt.registerTask('mandrill', ['mandrill']);
+    grunt.registerTask('sendMandrill', ['mandrill:' + recipient]);
 
     // Upload images to our CDN on Rackspace Cloud Files
     grunt.registerTask('cdnify', ['default','cloudfiles','cdn:cloudfiles']);
