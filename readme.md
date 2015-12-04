@@ -1,6 +1,6 @@
-#Email build script
+# Hermes
 
-##What does it do?
+## What does it do?
 
 This helps simplify the creation and standardisation of HTML emails.
 
@@ -12,18 +12,18 @@ This helps simplify the creation and standardisation of HTML emails.
 
 This is a much faster way to produce emails that are easier to read and easier to edit.
 
-##Installation & Geeky stuff
+## Installation & Geeky stuff
 
 This uses grunt, assemble and handlebars to compile email ready HTML, the main difference between this version and the original is it has been modified to use Zurb's Ink framework.
 
-###Requirements
+### Requirements
 
 * **Node.js** - [Install Node.js](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 * **Grunt-cli and Grunt** (`npm install grunt-cli -g`)
 * **Ruby** - [Install ruby with RVM](https://rvm.io/rvm/install)
 * **Premailer** (`gem install premailer hpricot nokogiri`) - Required for inlining the CSS
 
-###Instructions
+### Instructions
 
 1. **Ensure Ruby is installed on host machine.** *MacOS has ruby installed by default*
 2. **Download and install [Node.js](https://nodejs.org)**
@@ -41,7 +41,7 @@ This uses grunt, assemble and handlebars to compile email ready HTML, the main d
 	
 	You should get some pretty good feedback in the terminal to see what needs fixing.
 	
-##Ink framework
+## Ink framework
 
 Ink is a responsive email framework, used to make HTML emails look great on any client or device. It includes a 12-column grid, as well as some simple UI elements.
 
@@ -51,9 +51,9 @@ Ink requires quite strict markup in order to work across so many email clients.
 
 Luckily there are a lot of shortcuts in here to make the creation of these emails faster. Woohoo!
 	
-##Using the script
+## Using the script
 
-###Folders
+### Folders
 
 There are a bunch of folders inside the script, but you old have to worry about two **dist** and **src**
 
@@ -63,15 +63,15 @@ There are a bunch of folders inside the script, but you old have to worry about 
 	* **partials** contains all of the preset ink partials, you can also add your own. (More on this later)
 	* **emails** This is the most important folder, and the one you'll spend all of your time in, it contains all of the source emails that you will be creating.
 
-###Creating your first email
+### Creating your first email
 
 Inside the src/emails folder you'll see an example file, take a look, it'll give you a lot of hints on how to get things done. This is a working email and you can play with it and break it, whatever really. It's all well and good, but you're here to make your own. So here's how you do it.
 
-####Create a new email.hbs file
+#### Create a new email.hbs file
 
 Inside src/emails, create a new file (You can do this from your text editor) and call it *something***.hbs** or whatever you want your email to be called. The .hbs extension is very important. The system outputs HTML, but we write it in a special templating language called handlebars (Don't worry, its easy)
 
-####Add the boilerplate
+#### Add the boilerplate
 
 At the top of example.hbs you'll see 4 lines that look like this
 
@@ -93,25 +93,25 @@ Think of this as the configuration section of your email, let's go through what 
 
 When you create a new email file, make sure these three lines are at the top.
 
-####Handlebars
+#### Handlebars
 
 Don't be scared! It's not scary! Handlebars gives use lots of funky things we can do with templating, making lots of things easier to write and easier to read. Also there's a lot less code on screen. This is all output to regular HTML and we can mix in regular HTML wherever we like in the template.
 
 Handlebars markup is anything inside double curly braces `{{ I am some handlebars }}` it's called handlebars because if you turn your head to the side, a curly brace looks a bit like a handlebar mustache. 
 
-#####What can I do with handlebars?
+##### What can I do with handlebars?
 
 Handlebars is used for outputting variables and partials in your email. If you're writing a heading, paragraph etc, you can just use regular HTML.
 
-###variables
+### variables
 
 There are a bunch of preset variables to use inside your email templates, so you don't have to copy and paste a lot of the same links or text. Take a look at the file inside the **default.hbs** file inside **data** folder and you can see whats available, you can even extend this with lots more variables, but more on that in a sec.
 
-####Adding a variable
+#### Adding a variable
 
 Just type `{{default.variableName}}` the `default` part let's handlebars know where the list is, the second part is the name of the variable. It's that simple.
 
-####Creating new variables
+#### Creating new variables
 
 If you find yourself typing a lot of the same things over and over again, you can save yourself some time and add it to the list of variables, which is dead easy. Just go to the **default.hbs** file inside **data** folder, add a new line and type something like:
 
@@ -123,15 +123,15 @@ The first part is the variable name that you'll call it with, the second part be
 
 **Note:** Variable names cannot contain spaces or weird characters like ! or €, but you can use dashes and underscores, the most readable and shortest way to write variable names is [camelCasing](http://searchsoa.techtarget.com/definition/CamelCase)
 
-####Header variables
+#### Header variables
 
 Inside /data is a file called header.yml that contains links to a whole load of predefined email headers for products, you can also add more :) Yake a look.
 
-###Writing your email
+### Writing your email
 
 You can now just write your email as normal, using the partials provided. Which I'll cover in the next section.
 
-###Now what?
+### Now what?
 
 So you have your **email.hbs** file, but how do you turn this into a real email? Ok, again, don't get scared, this is really easy. You'll need to use the **terminal** which is a command line bit of software on your computer. It's not as scary as it seems, also you look like a badass hacker when you use it. Chicks dig hackers.
 
@@ -149,23 +149,23 @@ And you're done!
 
 No, seriously, you are. You can now just copy the email.html file from **dist** to eloqua. The script will process all email files inside **src/emails** and spit them all out at once. If you make a change to an email template, just run `grunt` again and it'll generate them all again.
 
-###Tips
+### Tips
 
 * The more emails you have, the longer it'll take grunt to generate them all. So if you are done with a particular template, just move it out of the folder and grunt will run quicker.
 * Dist will probably get messy after a while, so don't be afraid to remove it's contents. If the .hbs file still exists, you can just re-generate it any time you want.
 
 
-##Templating
+## Templating
 Before you start, it's **highly** recommended you read Ink's [Documentation](http://zurb.com/ink/docs.php) to fully understand how it works.
 
 Although I've tried to make it as easy as possible to write templates there are still some important steps to go through and things to know about Ink that you need to bear in mind when writing emails. Don't worry too much, it's not hard and it's still a lot easier to write emails than before :)
 
-###Partials
+### Partials
 Think of partials like blocks (If you're familiar with Concrete5) they are effectively chunks of predefined code that you can pass parameters (options) to. They are like shortcuts, making complicated email markup easy to read, or making repetitive tasks faster. 
 
 We have a lot of predefined partials to use and it forms the basis of templating with this system. You can also make your own! But more on this later.
 
-####How to use a partial
+#### How to use a partial
 
 Partials have a very specific syntax (Way of writing) that must be followed. A partial looks like this:
 
@@ -177,10 +177,10 @@ The first thing you should write is the partial name, which tells handlebars whi
 
 The second part is where you add 'parameters', think of these as options that get passed to the partial and make it do something, these are preset and vary by partial, but you can see the list of accepted parameters by partial below. Partials can accept multiple parameters.
 
-####Types of partial
+#### Types of partial
 There are two types of partial in this system, **containers** and **self-closing** partials
 
-#####Containers
+##### Containers
 
 Container partials have two parts, an opening partial and a closing partial. All of your text and images should be in-between these. A container partial looks like this:
 
@@ -195,7 +195,7 @@ The closing partial always has the same name as the opening partial with **-ends
 
 You can add any HTML markup you like in between the opening and closing partials, but you should **not** add anything that will modify the layout of the email. Just content. All layout **must** be created with partials.
 
-#####Self-closing partials
+##### Self-closing partials
 
 Self-closing partials are similar to Container partials, but with one key difference, yup, you guessed it, you don't have to close them. You simply add the partial, pass in some parameters and you're done! Two examples of Self-closing partials are buttons and images. Which look like this:
 
@@ -204,7 +204,7 @@ Self-closing partials are similar to Container partials, but with one key differ
 `{{>button link="http://google.com" description="Link to google"}}`
 ___
 
-###Element structure
+### Element structure
 
 Ink follows a very strict structure of markup to ensure emails are deliverable. See the Grid section of Ink's documentation for more in-depth details.
 
@@ -213,11 +213,11 @@ The structure always goes:
 **row** > **wrapper** > **column**
 ___
 
-####Rows
+#### Rows
 
 Ink emails are based on **rows** think of a row like a block, it's a full strip across an email. **EVERYTHING** is in a row.
 
-####Wrappers
+#### Wrappers
 
 Around a **column** there is a **wrapper**, columns will not work without a wrapper. Luckily the **column** partial already contains a wrapper. So why am I mentioning it? 
 
@@ -225,7 +225,7 @@ The last wrapper in a **Row** ALWAYS needs the *end* parameter, otherwise your l
 
 But generally you don't *need* to add wrappers yourself. Although you can. If you want. Weirdo.
 
-####Columns
+#### Columns
 
 Columns denote the width of the content, as based on a 12-column system. The content inside them will expand to cover n-columns, assuming that the number of columns in one row adds up to 12.
 
@@ -263,10 +263,10 @@ This row is valid and will work lovely-ly.
 
 
 
-###List of predefined ink partials
+### List of predefined ink partials
 All partials contain a parameter called *classes* for any extra styling and some little layout flourishes, but more on this later. Some partials have **required** parameters, they will not work correctly without adding these parameters. Some partials will also have a list of predefined classes, to use a predefined class, add a classes parameter then add the desired predefined class to your partial.
 
-###header - *Self-closing*
+### header - *Self-closing*
 `{{>row}}` contains a table with a **row** class.
 
 **Optional parameters:**
@@ -275,7 +275,7 @@ All partials contain a parameter called *classes* for any extra styling and some
 * ***product*** - Accepts a product name for a generic header
 
 
-###row - *Container*
+### row - *Container*
 
 `{{>row}}` contains a table with a **row** class.
 
@@ -293,7 +293,7 @@ All partials contain a parameter called *classes* for any extra styling and some
 
 ---
 
-###box - *Container*
+### box - *Container*
 
 `{{>box}}` is a shortcut for creating a full-width row with no extra markup. Nifty. **Note:** Box cannot contain columns, but can contain subGrid partials. 
 
@@ -306,7 +306,7 @@ All partials contain a parameter called *classes* for any extra styling and some
 ---
 
 
-###column - *Container*
+### column - *Container*
 
 `{{>column}}` contains a **column** and an opening **wrapper** columns should always be inside a row and the column number should always equal 12. The *columns* parameter value can be written in text or numbers. **Important:** The *end* parameter is should always be used on the **last** column in a row.
 
@@ -325,7 +325,7 @@ All partials contain a parameter called *classes* for any extra styling and some
 
 ---
 
-###button - *Self-closing*
+### button - *Self-closing*
 
 `{{>button}}` is a bullet proof way of creating a button, buttons stack vertically, if you need two in line you need to start working with **subGrid**
 
@@ -357,7 +357,7 @@ All partials contain a parameter called *classes* for any extra styling and some
 
 ---
 
-###image - *Self-closing*
+### image - *Self-closing*
 
 `{{>image}}` is for creating retina ready images for mobile, you don't *need* to use it, but it is a very handy way to use images, `{{>image}}` should always be in a column. It will inherit the padding from that column
 
@@ -375,7 +375,7 @@ All partials contain a parameter called *classes* for any extra styling and some
 
 ---
 
-###link - *Self-closing*
+### link - *Self-closing*
 
 `{{>link}}` is for text based links, it's just shorthand for ```<a href="#">A link</a>``` if no colour is set, the link will be the standard link colour.
 
@@ -391,7 +391,7 @@ All partials contain a parameter called *classes* for any extra styling and some
 
 ---
 
-###subGrid - *Container*
+### subGrid - *Container*
 
 `{{>subGrid}}` is for horizontally stacking elements inside a column. Think columns inside columns. subGrid works largely the same way as column but can only be used *inside* a column. subGrid's do not have a wrapper element, but **do** require the *end* parameter in the same way as column. Make sense?
 
@@ -406,7 +406,7 @@ All partials contain a parameter called *classes* for any extra styling and some
 
 ---
 
-###blockGrid - *Container*
+### blockGrid - *Container*
 
 `{{>blockGrid}}` For cases where neither the grid nor  subGrid is appropriate, blockGrid can often be quite useful. BlockGrid elements automatically align to the left and are pushed down to the next row individually as the viewport gets smaller, read the Ink docs for more detail. blockGrid has **three** parts.
 
@@ -435,16 +435,16 @@ blockGrid does not work the same way as regular columns, and should mostly not b
 
 ---
 
-###blockDivider - *self-closing*
+### blockDivider - *self-closing*
 
 `{{>blockDivider}}` is used to separate entries inside a block grid. It is the only partial with no parameters
 
 ---
 
 
-###List of Eloqua predefined partials
+### List of Eloqua predefined partials
 
-###dynamic - *self-closing*
+### dynamic - *self-closing*
 
 `{{>dynamic}}` inserts an eloqua dynamic field into your email body. You still need to first create the dynamic content in eloqua, this just points to that content.
 
@@ -454,7 +454,7 @@ blockGrid does not work the same way as regular columns, and should mostly not b
 
 ---
 
-###merge - *self-closing*
+### merge - *self-closing*
 
 `{{>merge}}` inserts an eloqua merge field for firstname and the like. The list of current fields is in partials/eloqua/eloqua helpers/mergeFields.hbs
 
@@ -463,7 +463,7 @@ blockGrid does not work the same way as regular columns, and should mostly not b
 * ***type*** - this is the name of the field you wish to add, check the list to see what's available.
 
 
-###Creating your own partials
+### Creating your own partials
 
 So these are awesome and form the basis of the system. But you can also create your own, to help speed up your working day. Bonzer.
 
@@ -473,7 +473,7 @@ So once you're done, just save the file and you're off. To use your new partial,
 
 You can also pass your own parameters into your partials. But come ask me if you want to know how :)
 
-##Previewing changes
+## Previewing changes
 
 If ```grunt``` takes a while to run, you can preview your changes by typing ```grunt serve``` in the terminal. This will build your templates once, then watches the complied files for changes, which then update in the browser. Wizard.
 
