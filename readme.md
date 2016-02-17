@@ -232,11 +232,11 @@ Columns denote the width of the content, as based on a 12-column system. The con
 A row needs a column, even if it's just one. The column partial has a *columns* parameter, where you specify the number of columns. Remaining columns in rows stack horizontally unless the number goes above 12. You do not have to manually set any widths. So if you have a row with two columns, it would look like this:
 
 ```
-{{>column columns="six"}}
+{{>column width="half"}}
 	I'm with stupid-->
 {{>column-ends}}
 
-{{>columns columns="six" end="true"}}
+{{>columns width="half" finish="true"}}
 	<-- He's the stupid one.
 {{>column-ends}}
 
@@ -247,11 +247,11 @@ A row needs a column, even if it's just one. The column partial has a *columns* 
 ```
 {{>row}}
 
-	{{>column columns="six"}}
+	{{>column width="half"}}
 		I'm with stupid-->
 	{{>column-ends}}
 
-	{{>columns columns="six" end="true"}}
+	{{>columns width="half" finish="true"}}
 		<-- He's the stupid one.
 	{{>column-ends}}
 	
@@ -272,7 +272,6 @@ All partials contain a parameter called *classes* for any extra styling and some
 **Optional parameters:**
 
 * ***classes*** 
-* ***product*** - Accepts a product name for a generic header
 
 
 ### row - *Container*
@@ -312,15 +311,15 @@ All partials contain a parameter called *classes* for any extra styling and some
 
 **Parameters:**
 
-* ***end*** accepts: `"1"` or `"true"` this sets the class for the last wrapper in a row. Defaults to false.
+* ***finish*** or **end*** accepts: `"1"` or `"true"` this sets the class for the last wrapper in a row. Defaults to false.
 
-* ***columns*** or ***col*** - accepts: `"one"`,`"two"`,`"three"` etc, all the way to `"twelve"` or  `"1"`,`"2"`,`"3"` all the way to `"12"` - defaults to 12 if no value set. *col* is just a shortcut, column should not have both.
+* ***width*** or ***w*** - accepts: `"one"`,`"two"`,`"three"` etc, all the way to `"twelve"` or  `"1"`,`"2"`,`"3"` all the way to `"12"`, for less numbery sorts you can also use `"full"`, `"half"`, `"third"` or `"quarter"` - defaults to 12 if no value set. *w* is just a shortcut, column should not have both.
 
 **Optional parameters:**
 
 * ***col-classes*** additional classes for the `{{>column}}` element
 * ***classes*** additional classes for the contents`{{>column}}` element
-* ***Offset*** or ***move*** - accepts: `"one"`,`"two"`,`"three"` etc, all the way to `"twelve"` or  `"1"`,`"2"`,`"3"` all the way to `"12"` - offsets a column by a number columns, should still equal 12.
+* ***offset*** or ***move*** - accepts: `"one"`,`"two"`,`"three"` etc, all the way to `"twelve"` or  `"1"`,`"2"`,`"3"` all the way to `"12"` - offsets a column by a number columns, should still equal 12.
 * ***pad*** - accepts: `"left"`,`"right"`or`"both"` defaults to both if no value set.
 
 ---

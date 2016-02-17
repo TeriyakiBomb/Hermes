@@ -1,55 +1,67 @@
 {{!-- Drys up the column partials. --}}
 
-{{#or columns col}}
-	    {{#is columns '1'}}      one {{/is}}
-		{{#is columns '2'}}      two {{/is}}
-		{{#is columns '3'}}      three {{/is}}
-		{{#is columns '4'}}      four {{/is}}
-		{{#is columns '5'}}      five {{/is}}
-		{{#is columns '6'}}      six {{/is}}
-		{{#is columns '7'}}      seven {{/is}}
-		{{#is columns '8'}}      eight {{/is}}
-		{{#is columns '9'}}      nine {{/is}}
-		{{#is columns '10'}}   	 ten {{/is}}
-		{{#is columns '11'}}     eleven {{/is}}
-		{{#is columns '12'}}     twelve {{/is}}
-		{{#is columns 'one'}}    one {{/is}}
-		{{#is columns 'two'}}    two {{/is}}
-		{{#is columns 'three'}}  three {{/is}}
-		{{#is columns 'four'}}   four {{/is}}
-		{{#is columns 'five'}}   five {{/is}}
-		{{#is columns 'six'}}    six {{/is}}
-		{{#is columns 'seven'}}  seven {{/is}}
-		{{#is columns 'eight'}}  eight {{/is}}
-		{{#is columns 'nine'}}   nine {{/is}}
-		{{#is columns 'ten'}}    ten {{/is}}
-		{{#is columns 'eleven'}} eleven {{/is}}
-		{{#is columns 'twelve'}} twelve {{/is}}
+{{#or width w}}
 
-	    {{#is col '1'}}      one {{/is}}
-		{{#is col '2'}}      two {{/is}}
-		{{#is col '3'}}      three {{/is}}
-		{{#is col '4'}}      four {{/is}}
-		{{#is col '5'}}      five {{/is}}
-		{{#is col '6'}}      six {{/is}}
-		{{#is col '7'}}      seven {{/is}}
-		{{#is col '8'}}      eight {{/is}}
-		{{#is col '9'}}      nine {{/is}}
-		{{#is col '10'}}   	 ten {{/is}}
-		{{#is col '11'}}     eleven {{/is}}
-		{{#is col '12'}}     twelve {{/is}}
-		{{#is col 'one'}}    one {{/is}}
-		{{#is col 'two'}}    two {{/is}}
-		{{#is col 'three'}}  three {{/is}}
-		{{#is col 'four'}}   four {{/is}}
-		{{#is col 'five'}}   five {{/is}}
-		{{#is col 'six'}}    six {{/is}}
-		{{#is col 'seven'}}  seven {{/is}}
-		{{#is col 'eight'}}  eight {{/is}}
-		{{#is col 'nine'}}   nine {{/is}}
-		{{#is col 'ten'}}    ten {{/is}}
-		{{#is col 'eleven'}} eleven {{/is}}
-		{{#is col 'twelve'}} twelve {{/is}}
-  		{{else}}
-  			twelve
-    {{/or}}
+	{{#is width '1'}}      one {{/is}}
+	{{#is width '2'}}      two {{/is}}
+	{{#is width '3'}}      three {{/is}}
+	{{#is width '4'}}      four {{/is}}
+	{{#is width '5'}}      five {{/is}}
+	{{#is width '6'}}      six {{/is}}
+	{{#is width '7'}}      seven {{/is}}
+	{{#is width '8'}}      eight {{/is}}
+	{{#is width '9'}}      nine {{/is}}
+	{{#is width '10'}}     ten {{/is}}
+	{{#is width '11'}}     eleven {{/is}}
+	{{#is width '12'}}     twelve {{/is}}
+	{{#is width 'one'}}    one {{/is}}
+	{{#is width 'two'}}    two {{/is}}
+	{{#is width 'three'}}  three {{/is}}
+	{{#is width 'four'}}   four {{/is}}
+	{{#is width 'five'}}   five {{/is}}
+	{{#is width 'six'}}    six {{/is}}
+	{{#is width 'seven'}}  seven {{/is}}
+	{{#is width 'eight'}}  eight {{/is}}
+	{{#is width 'nine'}}   nine {{/is}}
+	{{#is width 'ten'}}    ten {{/is}}
+	{{#is width 'eleven'}} eleven {{/is}}
+	{{#is width 'twelve'}} twelve {{/is}}
+
+	{{#is width 'full'}}    twelve {{/is}}
+	{{#is width 'half'}}    six {{/is}}
+	{{#is width 'third'}}   four {{/is}}
+	{{#is width 'quarter'}} three{{/is}}
+
+	{{#is w '1'}}          one {{/is}}
+	{{#is w '2'}}          two {{/is}}
+	{{#is w '3'}}          three {{/is}}
+	{{#is w '4'}}          four {{/is}}
+	{{#is w '5'}}          five {{/is}}
+	{{#is w '6'}}          six {{/is}}
+	{{#is w '7'}}          seven {{/is}}
+	{{#is w '8'}}          eight {{/is}}
+	{{#is w '9'}}          nine {{/is}}
+	{{#is w '10'}}   	   ten {{/is}}
+	{{#is w '11'}}         eleven {{/is}}
+	{{#is w '12'}}         twelve {{/is}}
+	{{#is w 'one'}}        one {{/is}}
+	{{#is w 'two'}}        two {{/is}}
+	{{#is w 'three'}}      three {{/is}}
+	{{#is w 'four'}}       four {{/is}}
+	{{#is w 'five'}}       five {{/is}}
+	{{#is w 'six'}}        six {{/is}}
+	{{#is w 'seven'}}      seven {{/is}}
+	{{#is w 'eight'}}      eight {{/is}}
+	{{#is w 'nine'}}       nine {{/is}}
+	{{#is w 'ten'}}        ten {{/is}}
+	{{#is w 'eleven'}}     eleven {{/is}}
+	{{#is w 'twelve'}}     twelve {{/is}}
+
+	{{#is w 'full'}}       twelve {{/is}}
+	{{#is w 'half'}}       six {{/is}}
+	{{#is w 'third'}}      four {{/is}}
+	{{#is w 'quarter'}}    three{{/is}}
+
+	{{else}}
+		twelve 
+{{/or}}
