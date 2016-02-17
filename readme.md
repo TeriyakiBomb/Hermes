@@ -4,7 +4,7 @@
 
 This helps simplify the creation and standardisation of HTML emails.
 
-1. Provides simplified markup for email creation
+1. Provides simplified markup for email creation, using assemble, handlebars and grunt.
 2. Builds HTML email templates, ready for upload
 3. Inlines CSS
 
